@@ -27,15 +27,15 @@ function init()
     onLoginAdvice = onLoginAdvice,
   }, true)
 
-  -- Call load AFTER game window has been created and 
-  -- resized to a stable state, otherwise the saved 
+  -- Call load AFTER game window has been created and
+  -- resized to a stable state, otherwise the saved
   -- settings can get overridden by false onGeometryChange
   -- events
   connect(g_app, {
     onRun = load,
     onExit = save
   })
-  
+
   gameRootPanel = g_ui.displayUI('gameinterface')
   gameRootPanel:hide()
   gameRootPanel:lower()
@@ -375,7 +375,11 @@ function onUseWith(clickedWidget, mousePosition)
   elseif clickedWidget:getClassName() == 'UICreatureButton' then
     local creature = clickedWidget:getCreature()
     if creature then
-      g_game.useWith(selectedThing, creature)
+      if creature:isPlayer() then
+        modules.game_textmessage.displayFailureMessage('You are not allowed to shoot directly on players.')
+      else
+        g_game.useWith(selectedThing, creature)
+      end
     end
   end
 end
@@ -600,7 +604,7 @@ function createThingMenu(menuPosition, lookThing, useThing, creatureThing)
       menu:addSeparator()
       for name,opt in pairs(category) do
         if opt and opt.condition(menuPosition, lookThing, useThing, creatureThing) then
-          menu:addOption(name, function() opt.callback(menuPosition, 
+          menu:addOption(name, function() opt.callback(menuPosition,
             lookThing, useThing, creatureThing) end, opt.shortcut)
         end
       end
