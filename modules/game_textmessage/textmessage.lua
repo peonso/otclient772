@@ -2,7 +2,7 @@ MessageSettings = {
   none            = {},
   consoleRed      = { color = TextColors.red,    consoleTab='Default' },
   consoleOrange   = { color = TextColors.orange, consoleTab='Default' },
-  consoleBlue     = { color = TextColors.blue,   consoleTab='Default' },
+  consoleBlue     = { color = TextColors.lightblue,   consoleTab='Default' },
   centerRed       = { color = TextColors.red,    consoleTab='Server Log', screenTarget='lowCenterLabel' },
   centerGreen     = { color = TextColors.green,  consoleTab='Server Log', screenTarget='highCenterLabel',   consoleOption='showInfoMessagesInConsole' },
   centerWhite     = { color = TextColors.white,  consoleTab='Server Log', screenTarget='middleCenterLabel', consoleOption='showEventMessagesInConsole' },

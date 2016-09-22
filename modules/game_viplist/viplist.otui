@@ -1,6 +1,6 @@
 VipListLabel < GameLabel
   margin-top: 2
-  text-offset: 16 0
+  text-offset: 16 1
   image-rect: 0 0 12 12
   image-clip: 0 0 12 12
   image-source: /images/game/viplist/icons

@@ -1,6 +1,6 @@
 TextEdit < UITextEdit
   font: verdana-11px-antialised
-  color: #272727
+  color: #dfdfdf
   size: 86 22
   text-offset: 0 4
   opacity: 1

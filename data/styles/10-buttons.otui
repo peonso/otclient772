@@ -1,6 +1,6 @@
 Button < UIButton
-  font: verdana-11px-antialised
-  color: #dfdfdfff
+  font: verdana-10px-antialised
+  color: #bfbfbfff
   size: 106 23
   text-offset: 0 0
   image-source: /images/ui/button
@@ -9,9 +9,6 @@ Button < UIButton
   image-border: 3
   padding: 5 10 5 10
   opacity: 1.0
-
-  $hover !disabled:
-    image-clip: 0 23 22 23
 
   $pressed:
     image-clip: 0 46 22 23

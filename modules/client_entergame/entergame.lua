@@ -320,7 +320,7 @@ function EnterGame.doLogin()
   protocolLogin.onCharacterList = onCharacterList
   protocolLogin.onUpdateNeeded = onUpdateNeeded
 
-  loadBox = displayCancelBox(tr('Please wait'), tr('Connecting to login server...'))
+  loadBox = displayCancelBox(tr('Please wait'), tr('Your character list is being loaded. Please wait.'))
   connect(loadBox, { onCancel = function(msgbox)
                                   loadBox = nil
                                   protocolLogin:cancelLogin()
